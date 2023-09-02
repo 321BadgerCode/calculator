@@ -30,8 +30,9 @@ buttons.forEach((button) => {
 		} else if (button.classList.contains('equals')) {
 			calculate();
 		} else if (button.classList.contains('clear')) {
-			clearDisplay();
 			clearEquationDisplay();
+			clearSteps();
+			clearDisplay();
 		} else if (button.classList.contains('function')) {
 			handleFunction(button.innerText);
 		} else if (button.classList.contains('variable')) {
@@ -88,10 +89,13 @@ function clearEquationDisplay() {
 	document.getElementById('equals').textContent = '';
 }
 
+function clearSteps() {
+	document.getElementById('steps').innerHTML = '';
+}
+
 function clearDisplay() {
 	currentInput = '';
-	equation = ''; // Clear the entire equation
-	document.getElementById('steps').innerHTML = ''; // Clear previous steps
+	equation = '';
 	updateDisplay();
 }
 
@@ -305,6 +309,10 @@ function calculate() {
 		previousAnswer = result;
 		updateEquationDisplay();
 		document.title = equation + currentInput + '=' + result;
+
+		clearDisplay();
+		currentInput = result.toString();
+		updateDisplay();
 	} catch (error) {
 		clearDisplay();
 		currentInput = 'Error';
