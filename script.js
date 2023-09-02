@@ -79,9 +79,9 @@ function updateDisplay() {
 	display.value = equation + currentInput; // Display the entire equation
 }
 
-function updateEquationDisplay() {
+function updateEquationDisplay(equation) {
 	document.getElementById('equals').textContent = '=';
-	document.getElementById('equation').textContent = equation + currentInput;
+	document.getElementById('equation').textContent = equation;
 }
 
 function clearEquationDisplay() {
@@ -307,8 +307,8 @@ function calculate() {
 	try {
 		const result = solveEquationWithSteps(ast);
 		previousAnswer = result;
-		updateEquationDisplay();
-		document.title = equation + currentInput + '=' + result;
+		updateEquationDisplay(input);
+		document.title = input + '=' + result;
 
 		clearDisplay();
 		currentInput = result.toString();
