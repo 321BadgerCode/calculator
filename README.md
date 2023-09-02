@@ -4,6 +4,7 @@ The Math Interpreter Calculator is a web-based calculator that allows users to p
 
 <p align="center">
 	<img alt="Icon" src="./icon.ico"/>
+	<img alt="Example" src="./ex.jpg"/>
 </p>
 
 ```diff
