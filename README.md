@@ -2,7 +2,9 @@
 
 The Math Interpreter Calculator is a web-based calculator that allows users to perform mathematical calculations, including evaluating expressions with support for various mathematical operations and functions. This calculator not only calculates the result but also displays a step-by-step breakdown of the calculation process.
 
-<center><img alt="Icon" src="./icon.ico"/></center>
+<p align="center">
+	<img alt="Icon" src="./icon.ico"/>
+</p>
 
 ```diff
 - Decimals are not yet supported. See the TODO list down below for more info.
