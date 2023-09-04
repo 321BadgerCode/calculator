@@ -27,6 +27,8 @@ buttons.forEach((button) => {
 			handleOperator(button.innerText);
 		} else if (button.classList.contains('number')) {
 			handleNumber(button.innerText);
+		} else if (button.classList.contains('decimal')) {
+			handleDecimal(button.innerText);
 		} else if (button.classList.contains('equals')) {
 			calculate();
 		} else if (button.classList.contains('clear')) {
@@ -58,6 +60,11 @@ function handleOperator(operator) {
 
 function handleNumber(number) {
 	currentInput += number;
+	updateDisplay();
+}
+
+function handleDecimal(decimal) {
+	currentInput += decimal;
 	updateDisplay();
 }
 
@@ -101,7 +108,7 @@ function clearDisplay() {
 
 function tokenize(input) {
 	// Tokenize the input into numbers, operators, functions, and variables
-	return input.match(/([0-9]+(?:\.[0-9]*)?)|(\+|\-|\*|\/|\^|\(|\)|sqrt|log|π)|([a-zA-Z_]+[a-zA-Z0-9_]*)/g) || [];
+	return input.match(/\d*\.?\d+|(\+|\-|\*|\/|\^|\(|\)|sqrt|log|π)|([a-zA-Z_]+[a-zA-Z0-9_]*)/g) || [];
 }
 
 const precedence = {
