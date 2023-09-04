@@ -307,7 +307,7 @@ function solveEquationWithSteps(ast) {
 
 function calculate() {
 	const input = document.getElementById('display').value;
-	const tokens = tokenize(input);
+	const tokens = tokenize(input.replace(',',''));
 	const postfix = parse(tokens);
 	const ast = buildAST(postfix);
 

@@ -7,9 +7,6 @@ The Math Interpreter Calculator is a web-based calculator that allows users to p
 	<img alt="Example" src="./ex.jpg"/>
 </p>
 
-```diff
-- Decimals are not yet supported. See the TODO list down below for more info.
-```
 ## Features
 
 - Basic arithmetic operations: Addition, subtraction, multiplication, and division.
@@ -28,7 +25,6 @@ The Math Interpreter Calculator is a web-based calculator that allows users to p
 
 - [ ] Fix text color for explanations in the step-by-step display.
 	- The nodes/terms(numbers, operators, and functions) should have different colors.
-- [ ] Add support for decimals in calculations.
 - [ ] Implement common mathematical functions (e.g., `sqrt`, `log`).
 - [ ] Integrate constants like `pi` and `e` for calculations.
 - [ ] Fix and implement the programmer mode for base conversions, shifting, and boolean operations.
